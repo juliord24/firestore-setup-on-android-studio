@@ -3,12 +3,15 @@
   
 ## Crear un proyecto en Firebase  
 Lo primero es crear un proyecto en Firebase, para ello debemos ir a la [consola](https://console.firebase.google.com/) de Firebase y dar clic en el botón de "Agregar proyecto". Luego simplemente seguimos los pasos.  
-![[Pasted image 20240219205233.png]]
+![Pasted image 20240219205233](https://github.com/juliord24/expoFirestore/assets/108367960/10406900-cc4f-46e9-bcc0-b3cf3b772278)
+
 
 Cuando lo tengamos creado debemos agregar una app Android
-![[Pasted image 20240219205340.png]]
+![Pasted image 20240219205340](https://github.com/juliord24/expoFirestore/assets/108367960/ac395f68-4a70-4c10-95de-900325c2d2d2)
+
 Si queremos usar el servicio de Authentication de Firebase tendremos que introducir la firma SHA-1 de la aplicación
-![[Pasted image 20240219205501.png]]
+![Pasted image 20240219205501](https://github.com/juliord24/expoFirestore/assets/108367960/f03c81f2-6033-43ee-b08e-cdec4796eac9)
+
 Podéis encontrar cómo en este [vídeo](https://youtu.be/PkvW5WoUonQ?t=506)
 
 Resumen:
@@ -19,7 +22,8 @@ Resumen:
 ```
 - La contraseña es "android"
 - Veréis algo como esto
-![[Pasted image 20240219210431.png]]
+![Pasted image 20240219210431](https://github.com/juliord24/expoFirestore/assets/108367960/48a47f2b-9c41-43ef-a47d-5fd1d37c7b6c)
+
 Después de esto seguimos los pasos y ya tendríamos listo el proyecto en Firebase
 
 
@@ -52,28 +56,33 @@ Si al añadir nuestra aplicación android al proyecto de Firebase hemos omitido 
 #### Archivo de configuración de Firebase
 
 - Hacemos click en el engranaje de la esquina superior izquierda en la consola de Firebase y seleccionamos configuración del proyecto
+![Pasted image 20240219212516](https://github.com/juliord24/expoFirestore/assets/108367960/dbd6cc36-cf26-491e-8bcc-e0bf335f5dd6)
 
-![[Pasted image 20240219212516.png]]
 - Navegamos hasta "Tus apps" y descargamos el archivo "google-services.json"
-![[Pasted image 20240219212811.png]]
+![Pasted image 20240219212811](https://github.com/juliord24/expoFirestore/assets/108367960/8f990846-7bea-495d-a677-5c42bc785dac)
+
 - Añadimos el archivo a la carpeta app de nuestra __aplicación__(es importante que sea en esta ruta y no otra)
-![[Pasted image 20240219213708.png]]
+![Pasted image 20240219213708](https://github.com/juliord24/expoFirestore/assets/108367960/8e9d5f6d-badb-4360-88aa-28d0580e1ba3)
+
 - En el archivo _build.gradle.kts_ a nivel de __proyecto__ añadimos el plugin de servicios de google como dependencia
 ```
  id("com.google.gms.google-services") version "4.4.1" apply false
 ```
-![[Pasted image 20240219214221.png]]
+![Pasted image 20240219214221](https://github.com/juliord24/expoFirestore/assets/108367960/cb5ed0dc-9143-4ebf-8292-51130157498e)
+
 - En el archivo _build.gradle.kts_ a nivel de __aplicación__ añadimos el plugin de servicios de google
 ```
 id("com.google.gms.google-services")
 ```
-![[Pasted image 20240219214704.png]]
+![Pasted image 20240219214704](https://github.com/juliord24/expoFirestore/assets/108367960/35da0ca2-b28b-439e-975c-3caac1b5aa19)
+
 - En el archivo _build.gradle.kts_ a nivel de __aplicación__(el mismo de antes) añadimos las dependencias de los productos de firebase que vamos a usar, en este caso Firestore y Authentication, también añadiremos BoM para no tener que especificar la versión de la librería que vamos a usar
 ```
 implementation(platform("com.google.firebase:firebase-bom:32.7.2")) implementation("com.google.firebase:firebase-firestore")
 implementation("com.google.firebase:firebase-auth")
 ```
-![[Pasted image 20240219215650.png]]
+![Pasted image 20240219215650](https://github.com/juliord24/expoFirestore/assets/108367960/6d0176ea-6c36-4054-bce9-519f9d2b02fa)
+
 
 Con esto ya hemos terminado la parte de configuración, empezamos a picar!!
 
