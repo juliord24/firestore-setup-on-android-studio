@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Con el método get, obtenemos todos los documentos de la colección "Usuarios"
-                // En el método onSuccess, recorremos todos los documentos y mostramos el usuario y la contraseña
+                // En el método onSuccess, recorremos todos los documentos y mostramos el usuario y la contraseña 
                 db.collection("Usuarios")
                         .get()
                         .addOnSuccessListener(new OnSuccessListener<com.google.firebase.firestore.QuerySnapshot>() {
