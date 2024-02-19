@@ -88,3 +88,6 @@ Con esto ya hemos terminado la parte de configuración, empezamos a picar!!
 A partir de ahora la documentación estará en el código.
 
 PD: después de haber modificado los archivos Gradle debemos sincronizarlos
+
+Para que os funcione el proyecto si hacéis un git clone tenéis que usar vuestro propio google-services.json y crear en la raíz del proyecto el archivo "local.properties" con la siguiente línea `sdk.dir=C\:\\Users\\julio\\AppData\\Local\\Android\\Sdk`
+Sustituid "julio" con vuestro usuario de windows, esa es la ruta por defecto del sdk de android.
