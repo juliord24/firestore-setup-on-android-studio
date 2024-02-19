@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "386101382132",
+    "project_id": "expofirestore-67ca4",
+    "storage_bucket": "expofirestore-67ca4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386101382132:android:38c7de0d1215440d6347a1",
+        "android_client_info": {
+          "package_name": "com.example.expofirestore"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSwpt1nLsnoNo5gbztxTCm07Cb4vzcpDg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
